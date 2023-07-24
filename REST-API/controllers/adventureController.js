@@ -26,7 +26,7 @@ adventureController.get('/', async (req, res) => {
 
 
 //get most rated adventures
-adventureController.get('/most-rated', async (req, res) => {
+adventureController.get('/most-recent', async (req, res) => {
     const adventure = await getMostRated()
     res.status(200).json(adventure);
 })
