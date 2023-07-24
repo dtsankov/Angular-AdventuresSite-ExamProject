@@ -11,7 +11,6 @@ const adventureSchema = new Schema({
         validator: (value)=> URL_PATTERN.test(value),
         message : "Image URL is not valid "
     } },
-    ratings : {type : mongoose.Mixed, default:string},
     _ownerId: { type: Types.ObjectId, ref: 'User', required: true },
 
 }, { timestamps: { createdAt: 'created_at' } });
