@@ -1,35 +1,42 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthActivate } from './shared/guards/auth.activate';
+import { HomeComponent } from './home/home.component';
+import { AdventureListComponent } from './adventure-list/adventures-list.component';
+import { MostRecentComponent } from './shared/most-recent/most-recent.component';
+import { NewAdventureComponent } from './new-adventure/new-adventure.component';
+import { AdventureDetailComponent } from './adventure-detail/adventure-detail.component';
+import { AdventureEditComponent } from './adventure-edit/adventure-edit.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    //component: HomeComponent,
+    component: HomeComponent,
   },
   {
     path: 'adventures/catalog',
     pathMatch: 'full',
-    //component: ItemsListComponent,
+    component: AdventureListComponent,
   },
   {
     path: 'adventures/catalog/most-recent',
     pathMatch: 'full',
-    //component: RecentItemsComponent,
+    component: MostRecentComponent,
   },
   {
     path: 'adventures/catalog/create',
-    //component: NewItemComponent,
+    component: NewAdventureComponent,
     data: {
-      title: 'New Item',
-      // loginRequired: true,
+      title: 'New Adventure',
+      loginRequired: true,
     },
   },
   {
     path: 'adventures/catalog/:id',
     pathMatch: 'full',
-    //component: ItemDetailComponent,
+    component: AdventureDetailComponent,
     canActivate: [AuthActivate],
     data: {
       guest: false,
@@ -38,7 +45,7 @@ const routes: Routes = [
   {
     path: 'adventures/catalog/edit/:id',
     pathMatch: 'full',
-    //component: ItemEditComponent,
+    component: AdventureEditComponent,
     canActivate: [AuthActivate],
     data: {
       guest: false,
@@ -46,7 +53,7 @@ const routes: Routes = [
   },
   {
     path: 'auth/profile',
-   // component: ProfileComponent,
+   component: ProfileComponent,
     canActivate: [AuthActivate],
     data: {
       title: 'Profile',

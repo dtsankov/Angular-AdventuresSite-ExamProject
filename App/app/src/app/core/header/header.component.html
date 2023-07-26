@@ -1,1 +1,47 @@
-<p>header works!</p>
+<header>
+    <div class="mini-navbar-wrap">
+      <div class="logo-wrap">
+        <p class="logo">
+          <a routerLink="/"><img src="../../../assets/0260.png_860.png"></a>
+        </p>
+      </div>
+      <div class="mini-navbar">
+        <ul *ngIf="!isLoggedIn">
+          <li>
+            <a routerLink="/">Home</a>
+          </li>
+          <li>
+            <a routerLink="adventures/catalog/most-recent">Latest Adventures</a>
+          </li>
+        </ul>
+  
+        <ul *ngIf="isLoggedIn">
+          <li>
+            <a routerLink="adventures/catalog">All Adventures</a>
+          </li>
+          <li>
+            <a routerLink="adventures/catalog/create">Create Adventure</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mini-navbar">
+        <ul *ngIf="!isLoggedIn">
+          <li>
+            <a class="logo-wrap" routerLink="/auth/login">Login</a>
+          </li>
+          <li>
+            <a class="logo-wrap" routerLink="/auth/register">Register</a>
+          </li>
+        </ul>
+  
+        <ul *ngIf="isLoggedIn">
+          <li>
+            <a routerLink="auth/profile">Profile</a>
+          </li>
+          <li>
+            <a routerLink="auth/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
