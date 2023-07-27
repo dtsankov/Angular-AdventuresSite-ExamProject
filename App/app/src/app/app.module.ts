@@ -15,6 +15,7 @@ import { AdventureEditComponent } from './adventure-edit/adventure-edit.componen
 import { AdventureListComponent } from './adventure-list/adventures-list.component';
 import { NewAdventureComponent } from './new-adventure/new-adventure.component';
 import { ProfileComponent } from './profile/profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ProfileComponent } from './profile/profile.component';
     AdventureListComponent,
     NewAdventureComponent,
     ProfileComponent,
-
+    
   ],
   imports: [
     AppRoutingModule,
@@ -35,7 +36,8 @@ import { ProfileComponent } from './profile/profile.component';
     SharedModule,
     AuthModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [appInterceptorProvider],
   bootstrap: [AppComponent]

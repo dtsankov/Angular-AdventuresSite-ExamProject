@@ -35,7 +35,7 @@ authController.get('/logout', (req, res) => {
     res.status(204).end();
 });
 
-// get photos by owner
+// Get adventures by owner
 
 authController.get('/profile', async (req, res) => {
     const _id = req?.user?._id;

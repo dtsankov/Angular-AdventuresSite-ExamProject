@@ -12,7 +12,7 @@ const routes: Routes = [
       canActivate:[AuthActivate],
       data: {
         title: 'Login',
-        "guest": true,
+        guest: true,
       },
     },
     {
@@ -21,7 +21,7 @@ const routes: Routes = [
       canActivate:[AuthActivate],
       data: {
         title: 'Register',
-        "guest": true,
+        guest: true,
   
       },
     },

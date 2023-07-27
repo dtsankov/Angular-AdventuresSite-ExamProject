@@ -15,7 +15,7 @@ import { AppEmailDirective } from './validators/app-email.directive';
   imports: [
     CommonModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports:[MostRecentComponent,AppEmailDirective]
 })

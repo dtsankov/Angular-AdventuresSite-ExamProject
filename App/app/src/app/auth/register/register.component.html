@@ -1,13 +1,12 @@
 <div class="container">
+  <h2>Registration Form</h2>
   <form class="register" [formGroup]="form" (ngSubmit)="registerHandler()">
-    <fieldset>
-      <h2>Registration Form</h2>
 
       <!-- username -->
       <p class="field field-icon">
         <label for="username"
           ><span><i class="fas fa-user"></i></span
-        ></label>
+        >Username</label>
         <input
           class="input-error"
           type="text"
@@ -31,7 +30,7 @@
       <p class="field field-icon">
         <label for="email"
           ><span><i class="fas fa-envelope"></i></span
-        ></label>
+        >Email</label>
         <input
           type="email"
           name="email"
@@ -60,7 +59,7 @@
         <p class="field field-icon">
           <label for="password"
             ><span><i class="fas fa-lock"></i></span
-          ></label>
+          >Password</label>
           <input
             type="password"
             name="password"
@@ -91,7 +90,7 @@
         <p class="field field-icon">
           <label for="rePassword"
             ><span><i class="fas fa-lock"></i></span
-          ></label>
+          >Repeat Password</label>
           <input
             type="password"
             name="rePassword"
@@ -113,6 +112,7 @@
       </ng-container>
 
       <!-- img-->
+      <label for="img">Image Url</label>
       <input
         type="url"
         title="img"
@@ -129,7 +129,7 @@
 
       <button
         [disabled]="form.invalid"
-        [style]="{ backgroundColor: form.invalid ? 'grey' : '#00C4F1' }"
+        [style]="{ backgroundColor: form.invalid ? 'grey' : '#017D98' }"
       >
         Create Account
       </button>
@@ -138,6 +138,5 @@
         Have an account?
         <a routerLink="/auth/login">Log In</a>
       </p>
-    </fieldset>
   </form>
 </div>

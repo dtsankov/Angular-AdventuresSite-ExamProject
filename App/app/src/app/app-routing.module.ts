@@ -15,6 +15,7 @@ const routes: Routes = [
     pathMatch: 'full',
     component: HomeComponent,
   },
+
   {
     path: 'adventures/catalog',
     pathMatch: 'full',
@@ -53,7 +54,7 @@ const routes: Routes = [
   },
   {
     path: 'auth/profile',
-   component: ProfileComponent,
+    component: ProfileComponent,
     canActivate: [AuthActivate],
     data: {
       title: 'Profile',
@@ -62,11 +63,8 @@ const routes: Routes = [
   },
 ];
 
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-
-
-export class AppRoutingModule { }
+export class AppRoutingModule {}

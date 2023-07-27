@@ -1,1 +1,86 @@
-<p>new-adventure works!</p>
+<div class="container">
+  <h3>Create Adventure</h3>
+  <form [formGroup]="form" (ngSubmit)="newAdventureHandler()">
+    <!--input title-->
+    <label>Title</label>
+    <input
+      type="text"
+      title="title"
+      placeholder="title"
+      required
+      minlength="5"
+      formControlName="title"
+    />
+
+    <ng-container *ngIf="form.get('title')?.touched">
+      <p class="error" *ngIf="form.get('title')?.errors?.['required']">
+        Title is required!
+      </p>
+      <p class="error" *ngIf="form.get('title')?.errors?.['minlength']">
+        Title's length should not be less than 5 characters!
+      </p>
+    </ng-container>
+
+    <!--input description-->
+    <label>Description</label>
+    <textarea
+      title="description"
+      placeholder="description"
+      required
+      minlength="10"
+      formControlName="description"
+    >
+    </textarea>
+
+    <ng-container *ngIf="form.get('description')?.touched">
+      <p class="error" *ngIf="form.get('description')?.errors?.['required']">
+        Description is required!
+      </p>
+      <p class="error" *ngIf="form.get('description')?.errors?.['minlength']">
+        Description's length should not be less than 10 characters!
+      </p>
+    </ng-container>
+
+    <!--input price-->
+    <label>Price</label>
+    <input
+      type="text"
+      title="price"
+      placeholder="price"
+      required
+      min="15"
+      formControlName="price"
+    />
+
+    <ng-container *ngIf="form.get('price')?.touched">
+      <p class="error" *ngIf="form.get('price')?.errors?.['required']">
+        Price is required!
+      </p>
+      <p class="error" *ngIf="form.get('price')?.errors?.['min']">
+        Price should not be less than 15 leva!
+      </p>
+    </ng-container>
+
+    <!--input img-->
+    <label>Img</label>
+    <input
+      type="url"
+      title="img"
+      name="img"
+      placeholder="img URL"
+      required
+      formControlName="img"
+    />
+
+    <ng-container *ngIf="form.get('img')?.touched">
+      <p class="error" *ngIf="form.get('img')?.errors?.['required']">
+        Image is required!
+      </p>
+    </ng-container>
+
+    <button
+    [disabled]="form.invalid"
+      [style]="{backgroundColor:form.invalid? 'grey' : '#017D98'}"
+     type="submit"class="btn">Create</button> 
+  </form>
+</div>

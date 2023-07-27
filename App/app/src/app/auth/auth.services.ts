@@ -18,7 +18,7 @@ export class AuthService {
 
   isLogged: boolean = false;
 
-  get isLoggedIn() {
+  get isLoggedIn():boolean {
     return this.user !== null;
   }
 
