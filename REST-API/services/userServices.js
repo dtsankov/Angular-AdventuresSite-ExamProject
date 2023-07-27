@@ -28,7 +28,9 @@ const register = async (email, password) => {
 
 
     if (existingEmail) {
-        throw new Error('Email already exists!')
+        const error = new Error('Email already exists!');
+        error.status = 409;
+        throw error;
     }
 
     const user = await User.create({ email, password })

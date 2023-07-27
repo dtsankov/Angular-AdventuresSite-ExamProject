@@ -1,8 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('./middlewares/cors');
-// const trimBody = require('./middlewares/trimBody');
-// const session = require('./middlewares/session');
 const adventureController = require('./controllers/adventureController')
 const authController = require('./controllers/authController')
 const cookieParser = require('cookie-parser');
@@ -26,7 +24,7 @@ async function start() {
         res.json({ message: 'REST service active' });
     });
 
-    // app.use('/users');
+  
     app.use('/auth', authController)
     app.use('/adventures/catalog', adventureController);
     

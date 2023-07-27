@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import {
-  ActivatedRoute,
   ActivatedRouteSnapshot,
   CanActivate,
   Router,
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { map, Observable, take } from 'rxjs';
+import {  Observable } from 'rxjs';
 import { ApiService } from 'src/app/api.service';
 
 @Injectable({
@@ -29,6 +28,9 @@ export class AuthActivate implements CanActivate {
     
     if (!token && guest == true) {
       return true;
+    }else if(token && !guest == true){
+      this.router.navigate(['/'])
+      return false
     } else if (token && guest == false) {
       return true;
     }

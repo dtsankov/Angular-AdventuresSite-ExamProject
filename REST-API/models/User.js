@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt')
 const userSchema = new mongoose.Schema({
+    username:{type:String},
     email: {required: true,type: String,},
-    password: { required: true,type: String,minlength: [6, 'Password should have at least 5 characters!'],maxlength: [12, 'Password cannot have more than 12 characters!'],
+    password: { required: true,type: String,minlength: [5, 'Password should have at least 5 characters!'],maxlength: [20, 'Password cannot have more than 20 characters!'],
     },adventures: [{type: mongoose.Types.ObjectId,ref: 'Adventure',}],
     img: {type: String}
 })
