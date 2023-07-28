@@ -1,7 +1,7 @@
 const { validateToken } = require("../services/userServices");
 
 const authMiddleware = (req, res, next) => {
-    const token = req.headers['x-authorization'];
+    const token = req.headers['X-Authorization'];
     if(token){
         try {
             const user = validateToken(token);

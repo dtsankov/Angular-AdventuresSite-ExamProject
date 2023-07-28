@@ -1,15 +1,14 @@
 footer {
     background-color: #017D98; /* Set your desired background color */
     color: #fff; /* Set your desired text color */
-    padding: -10px;
-    margin-bottom: 100px;
-    margin-top: auto;
-    
-
-   
+    padding: -15px;
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+   text-align: center;
+   min-height: 35px;
   }
   h1{
+    margin: auto;
    font-size: 15px;
-   display:flex;
-   justify-content: center;
   }

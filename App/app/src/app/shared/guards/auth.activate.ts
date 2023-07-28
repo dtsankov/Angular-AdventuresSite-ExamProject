@@ -27,13 +27,10 @@ export class AuthActivate implements CanActivate {
     
     
     if (!token && guest == true) {
-      return true;
-    }else if(token && !guest == true){
-      this.router.navigate(['/'])
-      return false
-    } else if (token && guest == false) {
-      return true;
-    }
+      return true
+    }else if(token && guest == false){
+      return true
+    } 
     return this.router.parseUrl('/not-found');
   }
 }

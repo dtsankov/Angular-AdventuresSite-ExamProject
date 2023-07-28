@@ -1,74 +1,90 @@
 .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #017D98;
-    border-radius: 5px;
-  }
+  min-height: 80vh;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 75px;
+}
+
+form.login {
+  margin: 0 auto;
+  padding: 50px;
+  border: 13px solid #017d98;
+  border-radius: 35px;
+}
+fieldset {
+  padding: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: none;
   
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: Cursive, sans-serif;
-    color: #017D98;
-  }
-  
-  form p.field {
-    margin-bottom: 15px;
-    font-family: Cursive, sans-serif;
-  }
-  
-  label {
-    font-weight: bold;
-    margin-right: 10px;
-    width: 100px;
-    color: #017D98;
-  }
-  
-  input[type="text"],
-  textarea,
-  input[type="url"],
-  input[type="password"],
-  input[type="email"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #017D98;
-    border-radius: 5px;
-    margin-top: 5px; /* Adjust the spacing between fields */
-  }
-  
-  textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  .error {
-    color: red;
-    margin-top: 5px;
-  }
-  
-  
-  button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #017D98;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-family: Cursive, sans-serif;
-  }
-  
-  button:disabled {
-    background-color: grey;
-    cursor: not-allowed;
-  }
-  
-  .text-center {
-    text-align: center;
-    margin-top: 15px;
-    font-family: Cursive, sans-serif;
-  }
-  
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Cursive, sans-serif;
+  color: #017d98;
+  font-size: 30px;
+
+}
+
+form p.field {
+  margin-bottom: 15px;
+  font-family: Cursive, sans-serif;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+  width: 100px;
+  color: #017d98;
+}
+
+input[type="text"],
+textarea,
+input[type="url"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #017d98;
+  border-radius: 5px;
+  margin-top: 5px; /* Adjust the spacing between fields */
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #017d98;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-family: Cursive, sans-serif;
+}
+
+button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 15px;
+  font-family: Cursive, sans-serif;
+}

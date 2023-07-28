@@ -1,9 +1,10 @@
-div #video-background {
+  #video-background {
     position:relative;
     top: 0px; /* Height of the navbar */
+    padding: -30px;
     left: 0;
     width: 100%;
-    height: calc(90% - 120px); /* Adjust the height based on navbar and footer heights */
+    min-height: calc(100vh - 80px); /* Adjust the height based on navbar and footer heights */
     object-fit: cover;
     z-index: 1;
   }

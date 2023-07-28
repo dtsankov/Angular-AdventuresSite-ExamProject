@@ -1,6 +1,8 @@
 <div class="container">
   <h3>Create Adventure</h3>
-  <form [formGroup]="form" (ngSubmit)="newAdventureHandler()">
+  <form class="create" [formGroup]="form" (ngSubmit)="newAdventureHandler()">
+    <fieldset>
+
     <!--input title-->
     <label>Title</label>
     <input
@@ -82,5 +84,6 @@
     [disabled]="form.invalid"
       [style]="{backgroundColor:form.invalid? 'grey' : '#017D98'}"
      type="submit"class="btn">Create</button> 
+    </fieldset>
   </form>
 </div>

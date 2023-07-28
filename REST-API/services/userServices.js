@@ -14,16 +14,18 @@ const validateToken = (token) => {
 const createAccessToken = (user) => {
     const payload = {
         _id: user._id,
+        username: user.username,
         email: user.email
     }
     const accessToken = jwt.sign(payload, server.SECRET_KEY)
     return {
         email: user.email,
+        username: user.username,
         accessToken,
         _id: user._id
     };
 }
-const register = async (email, password) => {
+const register = async (username, email, password,img) => {
     const existingEmail = await User.findOne({ email })
 
 
@@ -33,7 +35,7 @@ const register = async (email, password) => {
         throw error;
     }
 
-    const user = await User.create({ email, password })
+    const user = await User.create({username, email, password,img })
     return createAccessToken(user)
 }
 

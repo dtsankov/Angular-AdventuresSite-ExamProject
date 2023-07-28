@@ -1,9 +1,25 @@
 .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #017D98;
-    border-radius: 5px;
+  min-height: 80vh;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px;
+
+  }
+  form.register{
+ margin: 0 auto;
+  padding: 50px;
+  border: 13px solid #017d98;
+  border-radius: 35px;
+  }
+
+  fieldset{
+ padding: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: none;
   }
   
   h2 {

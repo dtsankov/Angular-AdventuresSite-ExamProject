@@ -2,7 +2,7 @@
     <div class="mini-navbar-wrap">
       <div class="logo-wrap">
         <p class="logo">
-          <a routerLink="/"><img src="../../../assets/0260.png_860.png"></a>
+          <a routerLink="/"><img src="../../../assets/0260.png_860 (1).png"></a>
         </p>
       </div>
       <div class="mini-navbar">
@@ -27,16 +27,16 @@
       <div class="mini-navbar">
         <ul *ngIf="!isLoggedIn">
           <li>
-            <a class="logo-wrap" routerLink="/auth/login">Login</a>
+            <a class="logo-wrap" routerLink="auth/login">Login</a>
           </li>
           <li>
-            <a class="logo-wrap" routerLink="/auth/register">Register</a>
+            <a class="logo-wrap" routerLink="auth/register">Register</a>
           </li>
         </ul>
   
         <ul *ngIf="isLoggedIn">
           <li>
-            <a routerLink="auth/profile">Profile</a>
+            <a routerLink="auth/profile">{{user?.username}}'s Profile</a>
           </li>
           <li>
             <a routerLink="auth/logout">Logout</a>

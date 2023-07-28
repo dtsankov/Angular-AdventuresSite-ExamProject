@@ -6,9 +6,9 @@ const authController = require('express').Router();
 
 // Register route
 authController.post('/register', async (req, res) => {
-    const { email, password } = req.body;
+    const {username, email, password,img } = req.body;
     try {
-        const user = await register( email, password);
+        const user = await register(username, email, password,img);
         res.status(201).json(user)
     } catch (error) {
         console.log(error)

@@ -15,11 +15,13 @@ const routes: Routes = [
     pathMatch: 'full',
     component: HomeComponent,
   },
-
+  
   {
     path: 'adventures/catalog',
     pathMatch: 'full',
     component: AdventureListComponent,
+    //canActivate: [AuthActivate],
+
   },
   {
     path: 'adventures/catalog/most-recent',
@@ -28,7 +30,9 @@ const routes: Routes = [
   },
   {
     path: 'adventures/catalog/create',
+    pathMatch: 'full',
     component: NewAdventureComponent,
+    //canActivate: [AuthActivate],
     data: {
       title: 'New Adventure',
       loginRequired: true,
@@ -38,7 +42,7 @@ const routes: Routes = [
     path: 'adventures/catalog/:id',
     pathMatch: 'full',
     component: AdventureDetailComponent,
-    canActivate: [AuthActivate],
+    //canActivate: [AuthActivate],
     data: {
       guest: false,
     },
@@ -47,7 +51,7 @@ const routes: Routes = [
     path: 'adventures/catalog/edit/:id',
     pathMatch: 'full',
     component: AdventureEditComponent,
-    canActivate: [AuthActivate],
+    //canActivate: [AuthActivate],
     data: {
       guest: false,
     },
@@ -55,7 +59,7 @@ const routes: Routes = [
   {
     path: 'auth/profile',
     component: ProfileComponent,
-    canActivate: [AuthActivate],
+    //canActivate: [AuthActivate],
     data: {
       title: 'Profile',
       guest: false,
