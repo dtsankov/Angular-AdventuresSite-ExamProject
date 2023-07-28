@@ -54,12 +54,12 @@ const login = async (email, password) => {
     }
 }
 
-const updateUserAdventures = async (_id, adventureId) => {
+const updateUserAdventures = async (id, adventureId) => {
     try {
-        const user = await User.findById(_id);
+        const user = await User.findById(id);
         let adventuresArr = user.adventures
         adventuresArr.push(adventureId)
-        await User.findByIdAndUpdate(_id, { adventures: adventuresArr })
+        await User.findByIdAndUpdate(id, { adventures: adventuresArr })
     } catch (error) {
         throw new Error(error)
     }

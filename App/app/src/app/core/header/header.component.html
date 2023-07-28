@@ -11,35 +11,35 @@
             <a routerLink="/">Home</a>
           </li>
           <li>
-            <a routerLink="adventures/catalog/most-recent">Latest Adventures</a>
+            <a routerLink="/adventures/catalog/most-recent">Latest Adventures</a>
           </li>
         </ul>
   
         <ul *ngIf="isLoggedIn">
           <li>
-            <a routerLink="adventures/catalog">All Adventures</a>
+            <a routerLink="/adventures/catalog">All Adventures</a>
           </li>
           <li>
-            <a routerLink="adventures/catalog/create">Create Adventure</a>
+            <a routerLink="/adventures/catalog/create">Create Adventure</a>
           </li>
         </ul>
       </div>
       <div class="mini-navbar">
         <ul *ngIf="!isLoggedIn">
           <li>
-            <a class="logo-wrap" routerLink="auth/login">Login</a>
+            <a class="logo-wrap" routerLink="/auth/login">Login</a>
           </li>
           <li>
-            <a class="logo-wrap" routerLink="auth/register">Register</a>
+            <a class="logo-wrap" routerLink="/auth/register">Register</a>
           </li>
         </ul>
   
         <ul *ngIf="isLoggedIn">
           <li>
-            <a routerLink="auth/profile">{{user?.username}}'s Profile</a>
+            <a routerLink="/auth/profile">{{user?.username}}'s Profile</a>
           </li>
           <li>
-            <a routerLink="auth/logout">Logout</a>
+            <a routerLink="/auth/logout">Logout</a>
           </li>
         </ul>
       </div>

@@ -2,6 +2,7 @@ import { IUser } from '../../interfaces/user';
 
 export const setSession = ({ _id, email, accessToken }: IUser) => {
   const user = { _id, email, accessToken };
+  console.log(user);
   sessionStorage.setItem('User', JSON.stringify(user));
   localStorage.setItem('User', JSON.stringify(user));
 };

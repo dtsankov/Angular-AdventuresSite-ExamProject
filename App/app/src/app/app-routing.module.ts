@@ -42,7 +42,7 @@ const routes: Routes = [
     path: 'adventures/catalog/:id',
     pathMatch: 'full',
     component: AdventureDetailComponent,
-    //canActivate: [AuthActivate],
+    canActivate: [AuthActivate],
     data: {
       guest: false,
     },
@@ -51,15 +51,16 @@ const routes: Routes = [
     path: 'adventures/catalog/edit/:id',
     pathMatch: 'full',
     component: AdventureEditComponent,
-    //canActivate: [AuthActivate],
+    canActivate: [AuthActivate],
     data: {
       guest: false,
     },
   },
   {
     path: 'auth/profile',
+    pathMatch: 'full',
     component: ProfileComponent,
-    //canActivate: [AuthActivate],
+    canActivate: [AuthActivate],
     data: {
       title: 'Profile',
       guest: false,
