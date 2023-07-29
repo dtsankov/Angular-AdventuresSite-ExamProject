@@ -6,42 +6,32 @@ import { IAdventure } from '../interfaces/adventure';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
+  adventureList: IAdventure[] | null = null;
 
-  adventureList: IAdventure[] | null = null
-  
+  constructor(
+    private apiServices: ApiService,
+    private authService: AuthService
+  ) {}
 
-  constructor(private apiServices: ApiService, private authService: AuthService){}
- 
-
-  get user(){
-    const {email,img} = this.authService.user!
-    return{
+  get user() {
+    const { email, img } = this.authService.user!;
+    return {
       email,
       img,
-    }
+    };
   }
-
 
   ngOnInit(): void {
-
-     this.apiServices.getAdventureByOwner().subscribe({
-      next:(value)=>{
-  console.log(value);
-  
-        this.adventureList = value
-  console.log(this.adventureList);
-
+    this.apiServices.getAdventureByOwner().subscribe({
+      next: (value) => {
+        this.adventureList = value;
       },
-      error:(err)=>{
+      error: (err) => {
         console.error(err);
-      }
-     })
+      },
+    });
   }
-
-  
-  ;
-
 }

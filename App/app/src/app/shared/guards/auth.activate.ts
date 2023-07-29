@@ -23,7 +23,6 @@ export class AuthActivate implements CanActivate {
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree> {
     const { guest } = route.data;
-    console.log(route.data);
     
     const token = localStorage.getItem('token');
     

@@ -15,14 +15,16 @@ const createAccessToken = (user) => {
     const payload = {
         _id: user._id,
         username: user.username,
-        email: user.email
+        email: user.email,
+        img: user.img
     }
     const accessToken = jwt.sign(payload, server.SECRET_KEY)
     return {
         email: user.email,
         username: user.username,
+        _id: user._id,
+        img:user.img,
         accessToken,
-        _id: user._id
     };
 }
 const register = async (username, email, password,img) => {

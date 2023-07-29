@@ -38,8 +38,9 @@ authController.get('/logout', (req, res) => {
 // Get adventures by owner
 
 authController.get('/profile', async (req, res) => {
-    const _id = req?.user?._id;
-    const adventures = await getByOwner(_id)
+    const user = req?.user
+    console.log(user);
+    const adventures = await getByOwner(user)
     res.status(200).json(adventures)
     res.end()
 });

@@ -88,4 +88,16 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  .profileImg{
+    width: 80px;
+    height: 80px;
+    border: 1px;
+    display: block;
+    border-radius: 9rem;
+  }
+
+  .navLogged{
+    display: flex;
+  }
   

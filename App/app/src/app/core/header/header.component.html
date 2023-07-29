@@ -34,9 +34,9 @@
           </li>
         </ul>
   
-        <ul *ngIf="isLoggedIn">
+        <ul class="navLogged" *ngIf="isLoggedIn">
           <li>
-            <a routerLink="/auth/profile">{{user?.username}}'s Profile</a>
+            <a routerLink="/auth/profile">{{user?.username}}'s Profile</a><img class="profileImg" alt="user-user" src="{{user?.img}}"/>
           </li>
           <li>
             <a routerLink="/auth/logout">Logout</a>
