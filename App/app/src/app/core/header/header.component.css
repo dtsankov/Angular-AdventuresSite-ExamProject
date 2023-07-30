@@ -95,9 +95,21 @@ body {
     border: 1px;
     display: block;
     border-radius: 9rem;
+    margin: 5px;
   }
 
   .navLogged{
     display: flex;
+  }
+  
+  .logout-btn{
+    padding-top: 1.9rem;
+  }
+  .profile{
+    display: flex;
+    padding-top: 0.8rem;
+  }
+  .profile a{
+    padding-top: 20px;
   }
   
