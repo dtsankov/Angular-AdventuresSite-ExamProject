@@ -1,115 +1,133 @@
 /* Reset some default styles */
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #017D98; /* Set your desired background color */
-    color: #fff; /* Set your desired text color */
-    padding: 0px;
-   
-    align-items: center;
-  }
-  
-  /* Logo styles */
-  .logo-wrap {
-    font-size: 24px;
-    font-weight: bold;
-    display:flex;
-    justify-content:space-between
-  }
-  
-  .logo a {
-    color: #fff; /* Set your desired link color */
-    text-decoration: none;
-    font-family:Cursive, sans-serif ;
-    
-  }
-  
-  .logo a:hover {
-    text-decoration: underline;
-  }
-  .logo img{
-    width: 60px;
-    height: 50px;
-    background-color: #017D98;
-    margin: auto;
-  }
-  
-  /* Mini-navbar styles */
-  .mini-navbar {
-    display: flex;
-    align-items:center;
-    justify-content:space-between;
-  }
-  
-  .mini-navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
 
-    
-  }
+/* Header styles */
+header {
+  background-color: #017D98; /* Set your desired background color */
+  color: #fff; /* Set your desired text color */
+  padding: 0px;
   
-  .mini-navbar li {
-    margin-right: 50px; /* Adjust as needed */
-  }
-  
-  .mini-navbar a {
-    color: #fff; /* Set your desired link color */
-    text-decoration: none;
-    font-family:Cursive, sans-serif;
-    font-size: 24px;
-    /* Set your desired font family */
-  }
-  
-  .mini-navbar a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Adjust the positioning of specific elements */
-  .mini-navbar-wrap {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    max-height: 8vh;
-  }
-  
-  .mini-navbar ul:first-child {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .mini-navbar ul:last-child {
-    display: flex;
-    justify-content: center;
-  }
+  align-items: center;
+}
 
-  .profileImg{
-    width: 80px;
-    height: 80px;
-    border: 1px;
+/* Logo styles */
+.logo-wrap {
+  font-size: 24px;
+  font-weight: bold;
+  display:flex;
+  justify-content:space-between
+}
+
+.logo a {
+  color: #fff; /* Set your desired link color */
+  text-decoration: none;
+  font-family:Cursive, sans-serif ;
+    width: 100%;
+    height: 100%;
     display: block;
-    border-radius: 9rem;
-    margin: 5px;
-  }
+    margin: 0;
+    padding: 0;
+}
 
-  .navLogged{
-    display: flex;
-  }
+
+
+.logo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+}
+
+.logo a:hover {
+  text-decoration: underline;
+}
+.logo img{
+  width: 60px;
+  margin: auto;
+  min-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+/* Mini-navbar styles */
+.mini-navbar {
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 10px 0;
+}
+
+.mini-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+
   
-  .logout-btn{
-    padding-top: 1.9rem;
-  }
-  .profile{
-    display: flex;
-    padding-top: 0.8rem;
-  }
-  .profile a{
-    padding-top: 20px;
-  }
-  
+}
+
+.mini-navbar li {
+  margin-right: 50px; /* Adjust as needed */
+}
+
+.mini-navbar a {
+  color: #fff; /* Set your desired link color */
+  text-decoration: none;
+  font-family:Cursive, sans-serif;
+  font-size: 24px;
+  /* Set your desired font family */
+}
+
+.mini-navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Adjust the positioning of specific elements */
+.mini-navbar-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  max-height: 8vh;
+}
+
+.mini-navbar ul:first-child {
+  display: flex;
+  justify-content: center;
+}
+
+.mini-navbar ul:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+.profileImg{
+  width: 80px;
+  height: 80px;
+  border: 1px;
+  display: block;
+  border-radius: 9rem;
+  margin: 5px;
+}
+
+.navLogged{
+  display: flex;
+}
+
+.logout-btn{
+  padding-top: 1.9rem;
+}
+.profile{
+  display: flex;
+  padding-top: 0.8rem;
+}
+.profile a{
+  padding-top: 20px;
+}
+

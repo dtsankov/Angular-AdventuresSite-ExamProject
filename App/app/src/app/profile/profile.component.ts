@@ -36,7 +36,7 @@ export class ProfileComponent implements OnInit {
       '',
       [Validators.required, appEmailValidator(DEFAULT_EMAIL_DOMAINS)],
     ],
-    tel: [''],
+    img: [''],
   });
  
 
@@ -49,7 +49,11 @@ export class ProfileComponent implements OnInit {
 
   get user() {
     const {username,email, img } = this.authService.user!;
+
+ 
+    
     return {
+      
       username,
       email,
       img,
@@ -76,7 +80,6 @@ export class ProfileComponent implements OnInit {
     }
 
     this.profileDetails = { ...this.form.value } as Profile;
-    console.log(this.form.value);
 
     this.toggleEditMode();
   }
