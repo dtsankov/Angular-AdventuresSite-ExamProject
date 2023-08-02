@@ -68,16 +68,20 @@ export class ProfileComponent implements OnInit {
       error: (err) => {
         console.error(err);
       },
-    });
+    })
   }
 
   toggleEditMode(): void {
     this.isEditMode = !this.isEditMode;
   }
-  saveProfileHandler(): void {
+  updateProfileHandler(): void {
     if (this.form.invalid) {
       return;
     }
+    const { username, email, img } = this.form.value;
+    const profile = {username,email,img}
+
+    this.apiServices.updateProfile(profile)
 
     this.profileDetails = { ...this.form.value } as Profile;
 

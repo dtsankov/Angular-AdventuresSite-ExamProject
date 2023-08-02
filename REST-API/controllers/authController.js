@@ -1,5 +1,6 @@
+const { Result } = require('express-validator');
 const { getByOwner } = require('../services/adventureServices');
-const { register, login } = require('../services/userServices');
+const { register, login , updateUser } = require('../services/userServices');
 
 
 const authController = require('express').Router();
@@ -39,9 +40,21 @@ authController.get('/logout', (req, res) => {
 
 authController.get('/profile', async (req, res) => {
     const user = req?.user
-    console.log(user);
     const adventures = await getByOwner(user)
     res.status(200).json(adventures)
     res.end()
 });
+
+// Edit profile
+authController.put('/profile',async(req,res)=>{
+    try{
+        const user = await updateUser(req.user._id,req.body)
+        res.status(200).json(user)
+
+    }catch(err){
+        console.log(err)
+        res.status(400).json({error: err.message});
+    }
+
+})
 module.exports = authController;

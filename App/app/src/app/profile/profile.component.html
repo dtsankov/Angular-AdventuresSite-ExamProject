@@ -4,8 +4,7 @@
 />
 
 <div class="container-fluid">
-  <h1>Your Adventures</h1>
-
+  
   <div class="container-right">
     <div class="profile">
       <fieldset>
@@ -14,16 +13,16 @@
 
         <ng-container *ngIf="!isEditMode">
           <div class="flex">
-            <p>Username:</p>
-            <p>{{ profileDetails.username }}</p>
+            <p>Username:  </p>
+            <p> {{ profileDetails.username }}</p>
           </div>
           <div class="flex">
-            <p>Email:</p>
-            <p>{{ profileDetails.email }}</p>
+            <p>Email:  </p>
+            <p> {{ profileDetails.email }}</p>
           </div>
           <div class="flex">
-            <p>Image:</p>
-            <p>{{ profileDetails.img }}</p>
+            <p>Image:  </p>
+            <p> {{ profileDetails.img }}</p>
           </div>
           <button class="edit-button" (click)="toggleEditMode()">Edit</button>
         </ng-container>
@@ -31,7 +30,7 @@
 
       <fieldset>
         <ng-container *ngIf="isEditMode">
-          <form [formGroup]="form" (ngSubmit)="saveProfileHandler()">
+          <form [formGroup]="form" (ngSubmit)="updateProfileHandler()">
             <!-- username input-->
 
             <div class="flex">
@@ -108,7 +107,7 @@
             </div>
             <!-- Actions-->
 
-            <button class="red-button">Cancel</button>
+            <button class="red-button" (click)="toggleEditMode">Cancel</button>
             <button class="green-button">Save</button>
           </form>
         </ng-container>
@@ -116,6 +115,7 @@
     </div>
   </div>
   <div class="container-left">
+    <h1>Your Adventures</h1>
     <div class="our-adventures">
       <div class="adventure" *ngFor="let adventure of adventureList">
         <div class="info-container">

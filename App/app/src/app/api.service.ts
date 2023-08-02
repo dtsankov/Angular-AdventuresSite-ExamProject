@@ -36,6 +36,10 @@ export class ApiService {
     return this.http.get<IAdventure[]>(`${apiUrl}/auth/profile`);
   }
 
+  updateProfile(data:{}){
+    return this.http.put<IUser>(`${apiUrl}/auth/profile`,data)
+  }
+
   createAdventure(data: {}) {
     return this.http.post(`${apiUrl}/adventures/catalog/create`, data);
   }

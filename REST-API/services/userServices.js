@@ -67,6 +67,15 @@ const updateUserAdventures = async (id, adventureId) => {
     }
 }
 
+const updateUser = async (id,data) =>{
+    const user = await User.findById(id)
+
+    user.username = data.username
+    user.email = data.email
+    user.img = data.img
+
+    return user.save()
+}
 const logout = (token) => {
     blacklist.add(token)
 }
@@ -76,5 +85,6 @@ module.exports = {
     createAccessToken,
     validateToken,
     updateUserAdventures,
-    logout
+    updateUser,
+    logout,
 }
