@@ -1,0 +1,72 @@
+.adventures {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20%;
+}
+.adventures-details {
+  background-color: #017d98;
+  width: 33rem;
+  height: 40rem;
+  position: relative;
+  color: white;
+  box-shadow: 0 0 10px #00000070;
+  text-align: center;
+  float: left;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.adventures-details img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 85px;
+}
+
+.btn {
+  font-size: 18px;
+  background-color: #ff8f34;
+  color: white;
+  padding: 20px 20px;
+  border-radius: 30px;
+  display: block;
+  width: 40%;
+  margin: auto;
+  font-family:Cursive, sans-serif;
+
+}
+
+.adventures-description {
+  background-color: #017d98;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 33rem;
+  height: 40rem;
+  position: relative;
+  color: white;
+  box-shadow: 0 0 10px #00000070;
+  text-align: center;
+  overflow: hidden;
+  font-family:Cursive, sans-serif;
+}
+
+.adventures-description p {
+  text-align: center;
+  padding-top: 12rem;
+  font-size: 25px;
+  text-decoration: none;
+  font-family:Cursive, sans-serif;
+
+}
+
+fieldset{
+  max-width: 5%;
+}

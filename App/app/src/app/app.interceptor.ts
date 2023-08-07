@@ -15,12 +15,8 @@ export class AppInterceptor implements HttpInterceptor {
         
         
         if(this.token){
-        console.log("Return True");
-
             return next.handle(req.clone({ setHeaders: { 'X-Authorization': this.token}}));
         }else{
-        console.log("Return False" + this.token);
-
             return next.handle(req.clone())
         }
     }

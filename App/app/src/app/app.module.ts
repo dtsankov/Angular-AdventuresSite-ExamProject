@@ -16,6 +16,8 @@ import { AdventureListComponent } from './adventure-list/adventures-list.compone
 import { NewAdventureComponent } from './new-adventure/new-adventure.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar'
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AdventureListComponent,
     NewAdventureComponent,
     ProfileComponent,
-    
+    PageNotFoundComponent
   ],
   imports: [
     AppRoutingModule,
@@ -38,6 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    MatProgressBarModule
   ],
   providers: [appInterceptorProvider],
   bootstrap: [AppComponent]

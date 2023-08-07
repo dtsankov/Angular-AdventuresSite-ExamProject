@@ -1,16 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { AuthService } from '../auth/auth.services';
 import { IAdventure } from '../interfaces/adventure';
 import { FormBuilder, Validators } from '@angular/forms';
 import { DEFAULT_EMAIL_DOMAINS } from '../shared/constants';
 import { appEmailValidator } from '../shared/validators/app-email-validator';
+import { Router } from '@angular/router';
+import { logoutSession } from '../shared/session/session';
+
 
 interface Profile {
   username : string;
   email:string;
   img:string;
 }
+
 
 @Component({
   selector: 'app-profile',
@@ -44,7 +48,8 @@ export class ProfileComponent implements OnInit {
   constructor(
     private apiServices: ApiService,
     private authService: AuthService,
-    private fb : FormBuilder
+    private fb : FormBuilder,
+    private router : Router
   ) {}
 
   get user() {
@@ -61,6 +66,7 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
     this.apiServices.getAdventureByOwner().subscribe({
       next: (value) => {
         this.adventureList = value;
@@ -81,10 +87,17 @@ export class ProfileComponent implements OnInit {
     const { username, email, img } = this.form.value;
     const profile = {username,email,img}
 
-    this.apiServices.updateProfile(profile)
+    this.apiServices.updateProfile(profile).subscribe({
+      next: () => this.authService.logout(),
+      error: (err) => console.log(err),
+    });
 
     this.profileDetails = { ...this.form.value } as Profile;
 
     this.toggleEditMode();
   }
+
+  
 }
+
+

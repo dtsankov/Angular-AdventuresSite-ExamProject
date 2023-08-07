@@ -37,7 +37,7 @@ export class ApiService {
   }
 
   updateProfile(data:{}){
-    return this.http.put<IUser>(`${apiUrl}/auth/profile`,data)
+    return this.http.put<IUser>(`${apiUrl}/auth/profile/edit`,data)
   }
 
   createAdventure(data: {}) {

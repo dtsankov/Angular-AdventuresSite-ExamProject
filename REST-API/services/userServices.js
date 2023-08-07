@@ -68,13 +68,15 @@ const updateUserAdventures = async (id, adventureId) => {
 }
 
 const updateUser = async (id,data) =>{
-    const user = await User.findById(id)
 
-    user.username = data.username
-    user.email = data.email
-    user.img = data.img
-
-    return user.save()
+     const updatedUser = await User.findByIdAndUpdate(id,{
+        username : data.username,
+        email : data.email,
+        img : data.img,
+    },{
+        new:true
+    })
+   return updatedUser
 }
 const logout = (token) => {
     blacklist.add(token)

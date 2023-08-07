@@ -74,7 +74,7 @@ border-radius: 30px;
 }
 .details-btn .details {
   font-size: 18px;
-  background-color: black;
+  background-color: #ff8f34;
   color: white;
   padding: 20px 20px;
   border-radius: 30px;
@@ -131,11 +131,12 @@ button {
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #000;
+  background-color: #ff8f34;
   text-align: center;
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+  border-radius: 30px;
 }
 
 a {

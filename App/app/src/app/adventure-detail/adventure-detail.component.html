@@ -1,1 +1,33 @@
-<p>adventure-detail works!</p>
+<ng-container *ngIf="hasAdventure">
+  <div class="adventures">
+    <div class="adventures-details">
+      <img src="{{ adventure.img }}" width="530" height="300" alt="img" />
+
+      <h3>Title: {{ adventure.title }}</h3>
+      <h2>Price: {{ adventure.price }} BGN</h2>
+      <br />
+
+      <div class="btn-container">
+        <ng-container *ngIf="owner">
+          <button
+            [routerLink]="['/adventures/catalog/edit/', adventure._id]"
+            type="submit"
+            class="btn"
+          >
+            Edit
+          </button>
+          <button (click)="deleteAdventureHandler()" type="submit" class="btn">
+            Delete
+          </button>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="adventures-description">
+      <h2>Description</h2>
+      <fieldset>
+        <p *ngFor="let each of adventure.description">{{ each }}</p>
+      </fieldset>
+    </div>
+  </div>
+</ng-container>

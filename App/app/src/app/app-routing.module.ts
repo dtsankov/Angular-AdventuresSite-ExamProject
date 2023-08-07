@@ -66,6 +66,15 @@ const routes: Routes = [
       guest: false,
     },
   },
+  {
+    path: "auth/profile/edit",
+    pathMatch: "full",
+    component:ProfileComponent,
+    canActivate:[AuthActivate],
+    data:{
+      guest: false
+    }
+  }
 ];
 
 @NgModule({

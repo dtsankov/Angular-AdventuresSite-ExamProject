@@ -12,17 +12,17 @@
         <h3>{{ profileDetails.username }}'s Info:</h3>
 
         <ng-container *ngIf="!isEditMode">
-          <div class="flex">
+          <div>
             <p>Username:  </p>
-            <p> {{ profileDetails.username }}</p>
+            <p class="flex"> {{ profileDetails.username }}</p>
           </div>
-          <div class="flex">
+          <div >
             <p>Email:  </p>
-            <p> {{ profileDetails.email }}</p>
+            <p class="flex"> {{ profileDetails.email }}</p>
           </div>
-          <div class="flex">
+          <div >
             <p>Image:  </p>
-            <p> {{ profileDetails.img }}</p>
+            <p class="flex"> {{ profileDetails.img }}</p>
           </div>
           <button class="edit-button" (click)="toggleEditMode()">Edit</button>
         </ng-container>
@@ -107,8 +107,8 @@
             </div>
             <!-- Actions-->
 
-            <button class="red-button" (click)="toggleEditMode">Cancel</button>
-            <button class="green-button">Save</button>
+            <button class="red-button" (click)="toggleEditMode()">Cancel</button>
+            <button class="green-button" type="submit">Save</button>
           </form>
         </ng-container>
       </fieldset>
