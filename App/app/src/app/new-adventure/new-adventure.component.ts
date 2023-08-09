@@ -20,7 +20,7 @@ export class NewAdventureComponent {
   form = this.fb.group({
     title: ['', [Validators.required, Validators.minLength(5)]],
     description: ['', [Validators.required, Validators.minLength(10)]],
-    price: ['', [Validators.required, Validators.min(5)]],
+    price: ['', [Validators.required, Validators.min(15)]],
     img: ['', [Validators.required]],
   });
 
