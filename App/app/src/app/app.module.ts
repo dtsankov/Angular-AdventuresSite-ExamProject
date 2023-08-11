@@ -18,6 +18,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar'
+import { MostRecentComponent } from './most-recent/most-recent.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar'
     AdventureListComponent,
     NewAdventureComponent,
     ProfileComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MostRecentComponent
   ],
   imports: [
     AppRoutingModule,

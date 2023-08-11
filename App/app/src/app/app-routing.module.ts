@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthActivate } from './shared/guards/auth.activate';
 import { HomeComponent } from './home/home.component';
 import { AdventureListComponent } from './adventure-list/adventures-list.component';
-import { MostRecentComponent } from './shared/most-recent/most-recent.component';
+import { MostRecentComponent } from './most-recent/most-recent.component';
 import { NewAdventureComponent } from './new-adventure/new-adventure.component';
 import { AdventureDetailComponent } from './adventure-detail/adventure-detail.component';
 import { AdventureEditComponent } from './adventure-edit/adventure-edit.component';

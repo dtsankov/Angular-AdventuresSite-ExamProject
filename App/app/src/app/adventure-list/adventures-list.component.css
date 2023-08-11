@@ -18,19 +18,19 @@
     border-radius: 30px;
     margin: 0 30px;
     width: 22rem;
-    height: 30rem;
+    height: 32rem;
     position: relative;
     color: white;
     box-shadow: 0 0 10px #00000070;
     text-align: center;
   }
-  .info h2 {
-    font-size: 16px;
+  .info h2, p {
+    font-size: 21px;
     text-align: center;
     
   }
   .details-btn .details {
-    font-size: 18px;
+    font-size: 25px;
     background-color: #ff8f34;
     color: white;
     padding: 20px 20px;
@@ -38,6 +38,8 @@
     display: block;
     width: 40%;
     margin: auto;
+    text-decoration: none;
+
   }
   .details:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
