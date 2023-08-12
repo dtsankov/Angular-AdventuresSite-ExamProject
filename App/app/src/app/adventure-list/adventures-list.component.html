@@ -1,4 +1,8 @@
-<section class="catalog">
+
+<div *ngIf="isLoading">
+  <app-loader/>
+</div>  
+<section *ngIf="!isLoading" class="catalog">
   <div class="container">
     <div class="adventure" *ngFor="let adventure of adventureList">
       <div class="info-container">

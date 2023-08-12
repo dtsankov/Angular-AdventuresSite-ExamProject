@@ -20,7 +20,10 @@ const routes: Routes = [
     path: 'adventures/catalog',
     pathMatch: 'full',
     component: AdventureListComponent,
-    //canActivate: [AuthActivate],
+    canActivate: [AuthActivate],
+    data: {
+      guest: false,
+    },
 
   },
   {
@@ -32,10 +35,10 @@ const routes: Routes = [
     path: 'adventures/catalog/create',
     pathMatch: 'full',
     component: NewAdventureComponent,
-    //canActivate: [AuthActivate],
+    canActivate: [AuthActivate],
     data: {
       title: 'New Adventure',
-      loginRequired: true,
+      guest: false,
     },
   },
   {

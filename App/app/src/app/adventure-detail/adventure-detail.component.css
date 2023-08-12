@@ -1,12 +1,12 @@
-.adventures {
-  min-height: 100vh;
+  .adventures {
+  min-height: 60vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 20%;
-  padding-left: 10rem;
-}
-.adventures-details {
+  justify-content: center;
+  padding: 100px;
+  }
+  .adventures-details {
   background-color: #017d98;
   width: 20rem;
   height: 40rem;
@@ -17,21 +17,26 @@
   float: left;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-}
+  position: relative;
+z-index: +1;
+overflow: hidden;
 
-.adventures-details img {
+  }
+
+  .adventures-details img {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   position: relative;
-}
+  max-width: 100%;
+  }
 
-.btn-container {
+  .btn-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-}
+  }
 
-.btn {
+  button {
   font-size: 18px;
   background-color: #ff8f34;
   color: white;
@@ -42,14 +47,16 @@
   margin-top: 46px;
   font-family:Cursive, sans-serif;
   cursor: pointer;
+  transition: 200ms ease-in-out ;
 
-}
-.btn :hover{
-background-color: white;
-text-decoration: #ff8f34;
-}
+  }
+  button :hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white !important ;
+    color: #ff8f34 !important;
+  }
 
-.adventures-description {
+  .adventures-description {
   background-color: #017d98;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -61,25 +68,34 @@ text-decoration: #ff8f34;
   text-align: center;
   overflow: hidden;
   font-family:Cursive, sans-serif;
-}
+  }
 
-.adventures-description p {
+  .adventures-description h2{
+    font-size: 26px;
+  }
+
+  .adventures-description p {
   text-align: start;
-  padding-top: 3rem;
-  font-size: 25px;
+  padding-top: 20px;
+  font-size: 23px;
   text-decoration: none;
   font-family:Cursive, sans-serif;
+  margin: 0;
 
-}
+  }
 
-fieldset{
+  fieldset{
   max-width: 80%;
   width: 115rem;
   margin-left: 40px;
   border: none;
-}
+  }
 
-.adventures-details h3, h2 {
+  .adventures-details h3, h2 {
   padding-top: 15px;
   padding-bottom: 15px;
-}
+  }
+
+  p{
+    word-break: break-all;
+  }

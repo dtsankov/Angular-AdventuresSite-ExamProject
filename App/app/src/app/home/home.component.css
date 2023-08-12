@@ -1,9 +1,30 @@
-  #home-background {
-    position:relative;
-    top: 0px; /* Height of the navbar */
-    padding: -30px;
-    left: 0;
+  .body-holder{
+    text-align: center;
+    margin: auto;
+    padding: 50px 20px;
+  }
+
+  .container-fluid{
+  background-image: url("../../assets/cropped-1920-1080-292034.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 95vh;
+
+  }
+
+  h1{
+    font-size: 46px;
+  }
+
+  p{
+    padding: 0px 30px;
+    font-size: 28px;
+  }
+
+  body{
     width: 100%;
-    object-fit: cover;
-    z-index: 1;
+    height: 100%;
+    padding: 0;
+    margin: 0;
   }

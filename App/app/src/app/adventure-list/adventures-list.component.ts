@@ -10,6 +10,7 @@ import { IAdventure } from '../interfaces/adventure';
 export class AdventureListComponent implements OnInit {
 
   adventureList: IAdventure[] | null = null
+  isLoading : boolean = true
 
   constructor(private apiServices:ApiService){}
 
@@ -17,6 +18,11 @@ export class AdventureListComponent implements OnInit {
     this.apiServices.loadAllAdventures().subscribe({
       next:(value)=>{
         this.adventureList = value
+
+     setTimeout(() => {
+          this.isLoading = false;
+        }, 500)
+
       },
       error: (err)=>{
         console.log(err);
