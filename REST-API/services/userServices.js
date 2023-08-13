@@ -46,13 +46,19 @@ const register = async (username, email, password,img) => {
 const login = async (email, password) => {
     const user = await User.findOne({ email });
     if (!user) {
-        throw new Error('Invalid email or password!')
+        const error = new Error('Invalid email or password!');
+        error.status = 409;
+        throw error;
     }
+
     const isUser = await bcrypt.compare(password, user.password)
+
     if (isUser) {
         return createAccessToken(user)
     } else {
-        throw new Error('Invalid email or password!')
+        const error = new Error('Invalid email or password!');
+        error.status = 409;
+        throw error;
     }
 }
 

@@ -3,40 +3,41 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
 <div *ngIf="isLoading">
-  <app-loader/>
-</div> 
+  <app-loader />
+</div>
 
 <div *ngIf="!isLoading" class="container-fluid">
-  
   <div class="container-right">
     <div class="profile">
       <fieldset>
-        <img class="profile-img" src="{{ profileDetails.img }}" alt="default user" />
+        <img
+          class="profile-img"
+          src="{{ profileDetails.img }}"
+          alt="default user"
+        />
         <h3>{{ profileDetails.username }}'s Info:</h3>
 
         <ng-container *ngIf="!isEditMode">
           <div>
-            <p>Username:  </p>
-            <p class="flex"> {{ profileDetails.username }}</p>
+            <p>Username:</p>
+            <p class="flex">{{ profileDetails.username }}</p>
           </div>
-          <div >
-            <p>Email:  </p>
-            <p class="flex"> {{ profileDetails.email }}</p>
+          <div>
+            <p>Email:</p>
+            <p class="flex">{{ profileDetails.email }}</p>
           </div>
-          <div >
-            <p>Image:  </p>
-            <p class="flex"> {{ profileDetails.img }}</p>
+          <div>
+            <p>Image:</p>
+            <p class="flex">{{ profileDetails.img }}</p>
           </div>
           <button class="edit-button" (click)="toggleEditMode()">Edit</button>
         </ng-container>
-   
 
-     
         <ng-container *ngIf="isEditMode">
           <form [formGroup]="form" (ngSubmit)="updateProfileHandler()">
             <!-- username input-->
 
-            <div >
+            <div>
               <p>Username:</p>
               <input
                 type="text"
@@ -69,7 +70,7 @@
 
             <!-- email input-->
 
-            <div >
+            <div>
               <p>Email:</p>
               <input
                 type="email"
@@ -98,7 +99,7 @@
 
             <!-- image input-->
 
-            <div >
+            <div>
               <p>Image:</p>
               <div>
                 <input
@@ -113,8 +114,18 @@
             </div>
             <!-- Actions-->
             <div class="btn">
-            <button class="red-button" (click)="toggleEditMode()">Cancel</button>
-            <button class="green-button" type="submit">Save</button>
+              <button class="red-button" (click)="toggleEditMode()">
+                Cancel
+              </button>
+              <button
+                button
+                [disabled]="form.invalid"
+                [style]="{ backgroundColor: form.invalid ? 'grey' : '#017D98' }"
+                class="green-button"
+                type="submit"
+              >
+                Save
+              </button>
             </div>
           </form>
         </ng-container>
@@ -129,12 +140,14 @@
           <img src="{{ adventure.img }}" />
           <div class="info">
             <h2>{{ adventure.title }}</h2>
-          </div >
+          </div>
           <div class="info">
             <p>Price : {{ adventure.price }} BGN</p>
           </div>
           <div class="details-btn">
-            <a routerLink="/adventures/catalog/{{ adventure._id }}" class="details"
+            <a
+              routerLink="/adventures/catalog/{{ adventure._id }}"
+              class="details"
               >Details</a
             >
           </div>

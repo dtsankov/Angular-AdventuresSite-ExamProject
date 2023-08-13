@@ -12,6 +12,9 @@ import { DEFAULT_EMAIL_DOMAINS } from 'src/app/shared/constants';
 })
 export class LoginComponent {
   appEmailDomains = DEFAULT_EMAIL_DOMAINS
+
+  errorMessage: string | null = null;
+
  
 
   constructor(
@@ -33,7 +36,7 @@ export class LoginComponent {
         this.router.navigate(['/adventures/catalog']);
       },
       error: (err) => {
-        console.log(err);
+        this.errorMessage = err.error.error
       },
     });
   }
