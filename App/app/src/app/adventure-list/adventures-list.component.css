@@ -54,3 +54,6 @@
   background-color: white !important ;
   color: #ff8f34 !important;
 }
+.catalog{
+  min-height: 95vh;
+}

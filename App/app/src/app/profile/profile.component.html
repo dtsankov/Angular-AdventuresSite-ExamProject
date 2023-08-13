@@ -2,8 +2,11 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
+<div *ngIf="isLoading">
+  <app-loader/>
+</div> 
 
-<div class="container-fluid">
+<div *ngIf="!isLoading" class="container-fluid">
   
   <div class="container-right">
     <div class="profile">
@@ -26,14 +29,14 @@
           </div>
           <button class="edit-button" (click)="toggleEditMode()">Edit</button>
         </ng-container>
-      </fieldset>
+   
 
-      <fieldset>
+     
         <ng-container *ngIf="isEditMode">
           <form [formGroup]="form" (ngSubmit)="updateProfileHandler()">
             <!-- username input-->
 
-            <div class="flex">
+            <div >
               <p>Username:</p>
               <input
                 type="text"
@@ -43,6 +46,7 @@
                 formControlName="username"
                 required
                 minlength="5"
+                class="flex"
               />
             </div>
 
@@ -65,7 +69,7 @@
 
             <!-- email input-->
 
-            <div class="flex">
+            <div >
               <p>Email:</p>
               <input
                 type="email"
@@ -74,6 +78,7 @@
                 id="email"
                 formControlName="email"
                 required
+                class="flex"
               />
             </div>
 
@@ -93,7 +98,7 @@
 
             <!-- image input-->
 
-            <div class="flex">
+            <div >
               <p>Image:</p>
               <div>
                 <input
@@ -102,13 +107,15 @@
                   id="img"
                   value="{{ profileDetails.img }}"
                   formControlName="img"
+                  class="flex"
                 />
               </div>
             </div>
             <!-- Actions-->
-
+            <div class="btn">
             <button class="red-button" (click)="toggleEditMode()">Cancel</button>
             <button class="green-button" type="submit">Save</button>
+            </div>
           </form>
         </ng-container>
       </fieldset>

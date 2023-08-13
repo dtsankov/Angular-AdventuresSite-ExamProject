@@ -1,6 +1,6 @@
   .body-holder{
     text-align: center;
-    margin: auto;
+    margin-left: 50%;
     padding: 50px 20px;
   }
 
@@ -15,11 +15,16 @@
 
   h1{
     font-size: 46px;
+  font-family: Cursive, sans-serif;
+
   }
 
   p{
     padding: 0px 30px;
     font-size: 28px;
+    margin-top: 130px;
+  font-family: Cursive, sans-serif;
+
   }
 
   body{
@@ -27,4 +32,28 @@
     height: 100%;
     padding: 0;
     margin: 0;
+  }
+  .btn {
+    border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: #ff8f34;
+  text-align: center;
+  cursor: pointer;
+  width: 17%;
+  font-size: 16px;
+  border-radius: 30px;
+  transition: 200ms ease-in-out;
+  font-family: Cursive, sans-serif;
+  margin-left: 40%;
+  }
+  .btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white !important ;
+    color: #ff8f34 !important;
+  }
+  .btn a{
+    text-decoration: none;
+
   }

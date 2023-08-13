@@ -1,0 +1,51 @@
+.body-holder{
+    text-align: center;
+    padding: 15rem 20px;
+  }
+
+  .container-fluid{
+  background-image: url("../../../assets/shark-underwater-with-big-teeth-generative-ai_74760-956.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 95vh;
+
+  }
+
+  h1{
+    font-size: 46px;
+  font-family: Cursive, sans-serif;
+ color: #fff;
+
+  }
+
+  body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .btn {
+    border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: #ff8f34;
+  text-align: center;
+  cursor: pointer;
+  width: 17%;
+  font-size: 16px;
+  border-radius: 30px;
+  transition: 200ms ease-in-out;
+  font-family: Cursive, sans-serif;
+  margin-left: 40%;
+  }
+  .btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white !important ;
+    color: #ff8f34 !important;
+  }
+  .btn a{
+    text-decoration: none;
+
+  }

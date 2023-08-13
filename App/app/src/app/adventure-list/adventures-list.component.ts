@@ -21,7 +21,7 @@ export class AdventureListComponent implements OnInit {
 
      setTimeout(() => {
           this.isLoading = false;
-        }, 500)
+        }, 300)
 
       },
       error: (err)=>{

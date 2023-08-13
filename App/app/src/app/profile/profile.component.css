@@ -103,8 +103,9 @@ border-radius: 30px;
 .profile-img {
   max-width: 100%;
   height: auto;
-  width: 50%;
+  width: 42%;
   height: 50%;
+  border-radius: 71px;
 }
 
 fieldset {
@@ -183,6 +184,14 @@ h1 {
   border: 1px solid #017d98;
   border-radius: 5px;
   margin-top: 5px;
+}
+
+.btn{
+  display: flex;
+  padding-top: 120px;
+}
+.error{
+  color: red;
 }
 
 

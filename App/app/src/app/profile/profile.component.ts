@@ -25,6 +25,8 @@ export class ProfileComponent implements OnInit {
   adventureList: IAdventure[] | null = null;
 
   isEditMode: boolean = false;
+  isLoading : boolean = true
+
 
   profileDetails: Profile = {
     username: this.user.username,
@@ -70,6 +72,9 @@ export class ProfileComponent implements OnInit {
     this.apiServices.getAdventureByOwner().subscribe({
       next: (value) => {
         this.adventureList = value;
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 300)
       },
       error: (err) => {
         console.error(err);
